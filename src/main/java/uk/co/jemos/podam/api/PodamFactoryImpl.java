@@ -1459,10 +1459,11 @@ public class PodamFactoryImpl implements PodamFactory {
 
 				parameterTypes = setter.getParameterTypes();
 				if (parameterTypes.length != 1) {
-					throw new IllegalStateException("A "
-							+ pojoClass.getSimpleName() + "."
-							+ setter.getName()
-							+ "() should have only one argument");
+					continue;
+//					throw new IllegalStateException("A "
+//							+ pojoClass.getSimpleName() + "."
+//							+ setter.getName()
+//							+ "() should have only one argument");
 				}
 
 				// A class which has got an attribute to itself (e.g.
